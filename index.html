@@ -7,9 +7,9 @@
     <!-- Google Font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
-    <!-- Fontawesome CDN -->
+    <!-- Font awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--  -->
@@ -31,6 +31,7 @@
               },
               fontFamily: {
                 sora: ['Sora', 'serif'],
+                poppins:["Poppins", "serif"],
               }
             }
           }
@@ -46,6 +47,9 @@
             }
             .hidden_for_mobile{
                 display: none;
+            }
+            .spatial_one{
+              display: none;
             }
         }
     </style>
@@ -112,7 +116,7 @@
         <!-- Header Banner -->
         <div class=" max-w-5xl mx-auto">
             <div class="max-w-[827px] text-center px-7 mx-auto">
-                <h2 class=" font-semibold text-4xl lg:text-5xl mt-24">Freshness <span class="text-primary">You Can <br> Count</span>  On, Prices You’ll Love!</h2>
+                <h2 class=" font-semibold text-4xl lg:text-5xl mt-24">Freshness <span class="text-primary animate-pulse">You Can <br> Count</span>  On, Prices You’ll Love!</h2>
                 <p class="max-w-[800px] mx-auto text-base lg:text-xl mt-8 mb-9 text-text">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
             </div>
             <div>
@@ -173,28 +177,323 @@
           <section class="bg-secondary py-20 lg:py-36 px-4">
             <div class="max-w-7xl mx-auto">
                 <h2 class="font-semibold text-4xl text-primary mb-12">Popular Products</h2>
-                <div class="flex flex-col lg:flex-row">
+                <div class="flex flex-col lg:flex-row gap-6 ">
+
+                  <!-- Popular product left -->
                     <div class="popular_left max-w-[424px]">
-                        <div class=" bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] relative pt-11 pb-48 pl-8 pr-16 rounded-xl">
+                        <div class="h-full bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] relative pt-11 pb-52 lg:pb-0 pl-8 pr-8 lg:pr-16 rounded-xl">
                              <h2 class="text-3xl text-white">30% off</h2>
                              <p class="text-base text-text lg:text-xl mt-3 mb-2">Discover a world of treats, toys, and  essentials handpicked for </p>
                              <a href="">
                                 <button class="bg-white rounded-lg text-base 2xl:text-xl font-normal px-8 py-3">Buy Now</button>
                              </a>
-                             <div class="max-w-64 absolute bottom-0 right-2">
+                             <div class="max-w-64 absolute bottom-0 right-2 ">
                                 <img src="./c2-assets/vegetable-offer.png" alt="">
                              </div>
                         </div>
                     </div>
-                    <div class="popular_right">
 
+                    <!-- Popular product right -->
+                    <div class="popular_right flex-1">
+
+                      <!-- Popular product right cards -->
+                       <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6">
+
+                        <!-- card onion -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/onion.png"
+                                alt="Movie" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Onion 1KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card tomato -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/tomato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Tomato 500g</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card potato -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/potato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Potato 1 KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card tomato -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/tomato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Tomato 500g</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card onion -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/onion.png"
+                                alt="Movie" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Onion 1KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card tomato -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/tomato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Tomato 500g</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card potato -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/potato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Potato 1 KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div>
+
+                         <!-- card onion -->
+                         <div>
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/onion.png"
+                                alt="Movie" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Onion 1KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div> 
+
+                         <!-- card potato -->
+                         <div class="spatial_one">
+                          <div class="card card-side bg-base-100 shadow-xl py-2 xl:py-4 pl-2 xl:pl-4 pr-2 gap-2 lg:gap-4 rounded-xl">
+                            <figure class="bg-secondary rounded-lg max-w-11 lg:max-w-20">
+                              <img
+                                src="./c2-assets/potato.png"
+                                alt="" />
+                            </figure>
+                            <div class="card-body p-0">
+                              <p class="text-text text-xs lg:text-base">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                4.5
+                              </p>
+                              <p class="font-medium text-sm lg:text-lg -mt-2">Potato 1 KG</p>
+                              <p class="font-medium text-xs lg:text-base -mt-2">$39.99</p>
+                            </div>
+                          </div>
+                         </div> 
+
+                       </div>
                     </div>
                 </div>
             </div>
           </section>
-    </main>
-    <footer>
 
+          <!-- Arrival & Offers Section -->
+           <section class="max-w-7xl mx-auto px-4 pt-20 lg:pt-36">
+            <h2 class="font-semibold text-4xl text-primary mb-7 lg:mb-12">Arrival & Offers</h2>
+            <!-- Container -->
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-0 lg:justify-between">
+              <!-- banner1 -->
+               <div class="lg:max-w-3xl">
+                <div class="w-full lg:h-full bg-[#115414] py-3 lg:pt-12 lg:pl-10 lg:pb-11 rounded-2xl ">
+                  <div class="hero-content flex-row-reverse p-0 gap-0 ">
+                    <div class="max-w-36 lg:max-w-80">
+                      <img
+                      src="./c2-assets/dawat-mock-up.png"
+                      class="w-full -mb-7" />
+                    </div>
+                    <div class="flex-1">
+                      <div>
+                        <img src="./c2-assets/dawat-logo.png" alt="">
+                      </div>
+                      <div class="pl-4 ">
+                        <h2 class="px-4 lg:px-10 py-2 lg:py-4 bg-[#63B76D] text-xs lg:text-2xl inline-block lg:block rounded-lg mt-4 lg:mt-8 mb-3 lg:mb-6 font-poppins text-white tracking-wider">Cook Exotic Dishes</h2>
+                        <h2 class="font-poppins text-xl lg:text-4xl text-white">UP to <span class="font-bold">20% OFF</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+               <!-- banner2 -->
+               <div class="lg:max-w-lg">
+                <div class="w-full lg:h-full bg-[#102861] py-3 lg:pt-5 lg:pl-10 lg:pb-11 rounded-2xl ">
+                  <div class="hero-content flex-row-reverse p-0 gap-0 lg:gap-4">
+                    <div class="max-w-36 lg:max-w-80">
+                      <img
+                      src="./c2-assets/india-gate-mock-up.png"
+                      class="w-3/5 lg:w-11/12 -mb-7 lg:-mb-16 ml-10 lg:ml-0" />
+                    </div>
+                    <div class="flex-1 pl-4">
+                      <div class="max-w-16 lg:max-w-24">
+                        <img src="./c2-assets/india-gate-logo.png" alt="">
+                      </div>
+                      <div class=" lg:pl-0">
+                        <h2 class="px-4 lg:px-6 py-2 lg:py-4 bg-[#2A4D97] text-xs lg:text-2xl inline-block lg:block rounded-lg mt-2 lg:mt-5 mb-3 lg:mb-6 font-poppins text-white tracking-wider">World’s No.1 Rice</h2>
+                        <h2 class="font-poppins text-xl lg:text-4xl text-white">UP to <span class="font-bold">40% OFF</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+            </div>
+           </section>
+
+           
+    </main>
+    <footer class="bg-primary pt-96 lg:pt-72 pb-12 lg:pb-36 relative mt-72">
+      
+
+      <!-- Container -->
+       <div class="max-w-7xl mx-auto px-4">
+
+        <!-- Footer form -->
+      <section class=" absolute -top-[15.5rem] pr-4 lg:pr-4">
+        <!-- Form Main -->
+        <div class="max-w-7xl mx-auto bg-secondary rounded-3xl ">
+          <!-- Container -->
+           <div class="lg:px-24 py-12 flex flex-col lg:flex-row gap-5 lg:gap-24">
+            <!-- Left -->
+             <div>
+              <div class="px-14 lg:px-0">
+                <img class="w-full" src="./c2-assets/vegetable-busket.png" alt="">
+              </div>
+             </div>
+             <!-- right -->
+              <div class="flex flex-col lg:justify-center px-5 lg:px-0 text-center lg:text-left">
+                <h2 class="font-bold lg:font-semibold text-xl lg:text-4xl text-primary lg:text-text lg:block">Get Grocery News!</h2>
+                <p class="lg:text-xl mt-2 lg:mt-5 mb-5 lg:mb-8 text-text">Exclusive training tips, ticks, product deals and more.</p>
+                <form action="" class="w-full">
+                  <input class="w-full lg:w-3/4 p-4 rounded-lg mb-9" type="email" placeholder="Enter email...."><br>
+                  <input class="bg-primary text-white border border-primary rounded-lg text-xl font-normal px-8 py-3" type="submit" value="Subscribe">
+                </form>
+              </div>
+           </div>
+        </div>
+      </section>
+
+        <!-- Footer Content -->
+        <div class="footer flex flex-col lg:flex-row justify-between w-full text-base-content ">
+          <nav class="mt-12 lg:mt-0">
+            <div>
+              <img src="./c2-assets/logo-footer.png" alt="">
+            </div>
+            <p class="lg:max-w-96 lg:text-xl text-secondary">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+          </nav>
+          <nav class="text-secondary lg:text-xl lg:space-y-8">
+            <a class="link link-hover">Product</a>
+            <a class="link link-hover">Services</a>
+            <a class="link link-hover">Contact us</a>
+          </nav>
+          <div class="lg:mt-20 text-secondary">
+            <h6 class="lg:text-xl text-secondary">Follow Us</h6>
+            <div class="grid grid-flow-col gap-4 text-xl">
+              <a>
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a>
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a>
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              
+            </div>
+          </nav>
+        </div>
+       </div>
     </footer>
 </body>
 </html>
